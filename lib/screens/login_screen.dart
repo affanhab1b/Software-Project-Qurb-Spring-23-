@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:testing/resources/auth_methods.dart';
 import 'package:testing/screens/signup_screen.dart';
+import 'package:testing/screens/signup_screen_2.dart';
 import 'package:testing/utils/utils.dart';
 import 'package:testing/utils/colors.dart';
 import 'package:testing/widgets/text_field_input.dart';
@@ -39,13 +40,12 @@ class _LoginScreenState extends State<LoginScreen> {
 
     if (res == "Success") {
       Navigator.of(context).pushReplacement(
-      MaterialPageRoute(
-        builder: (context) => const ResponsiveLayout(
-                mobileScreenLayout: MobileScreenLayout(),
-                webScreenLayout: WebScreenLayout(),
-              )
-      ),
-    );
+        MaterialPageRoute(
+            builder: (context) => const ResponsiveLayout(
+                  mobileScreenLayout: MobileScreenLayout(),
+                  webScreenLayout: WebScreenLayout(),
+                )),
+      );
       //
     } else {
       //
@@ -63,6 +63,14 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
+
+  // void navigatetoSignup2() {
+  //   Navigator.of(context).push(
+  //     MaterialPageRoute(
+  //       builder: (context) => const SignupScreen2(),
+  //     ),
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {

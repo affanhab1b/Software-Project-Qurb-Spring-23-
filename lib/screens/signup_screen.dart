@@ -90,89 +90,106 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: primaryColor2,
+        // title: const Text('Select your Neighborhood:'),
+        centerTitle: false,
+      ),
       body: SafeArea(
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 32),
-          width: double.infinity,
+          // padding: const EdgeInsets.symmetric(horizontal: 32),
+          // width: double.infinity,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Flexible(child: Container(), flex: 2),
-              // svg image
-              SvgPicture.asset(
-                'assets/Group 4.svg',
-                color: primaryColor2,
-                height: 64,
+              Align(
+                alignment: const Alignment(-0.5, 0.5),
+                child: Text(
+                  'Select Your Neighborhood:',
+                  style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
               ),
-              const SizedBox(height: 64),
-              // circular widget for image insertion
-              Stack(
-                children: [
-                  _image != null
-                      ? CircleAvatar(
-                          radius: 56,
-                          backgroundImage: MemoryImage(_image!),
-                        )
-                      : const CircleAvatar(
-                          radius: 56,
-                          backgroundImage: NetworkImage(
-                              'https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg'),
-                        ),
-                  Positioned(
-                      bottom: -13,
-                      left: 80,
-                      child: IconButton(
-                        onPressed: selectImage,
-                        icon: const Icon(
-                          Icons.add_a_photo_sharp,
-                          color: Colors.black45,
-                        ),
-                      ))
-                ],
-              ),
-              const SizedBox(
-                height: 24,
-              ),
-              // text field input for username
-              TextFieldInput(
-                textEditingController: _usernameController,
-                hintText: 'Enter your username',
-                textInputType: TextInputType.text,
-              ),
-              const SizedBox(
-                height: 24,
-              ),
-              // text field email
-              TextFieldInput(
-                textEditingController: _emailController,
-                hintText: 'Enter your email',
-                textInputType: TextInputType.emailAddress,
-              ),
-              const SizedBox(
-                height: 24,
-              ),
-              // text field for password
-              TextFieldInput(
-                textEditingController: _passwordController,
-                hintText: 'Enter your password',
-                textInputType: TextInputType.text,
-                isPass: true,
-              ),
-              const SizedBox(
-                height: 24,
-              ),
-              // text field input for bio
-              TextFieldInput(
-                textEditingController: _bioController,
-                hintText: 'Enter your bio',
-                textInputType: TextInputType.text,
-              ),
-              const SizedBox(
-                height: 24,
-              ),
+
+              const SizedBox(height: 400),
+              // Flexible(child: Container(), flex: 2),
+              // // svg image
+              // SvgPicture.asset(
+              //   'assets/Group 4.svg',
+              //   color: primaryColor2,
+              //   height: 64,
+              // ),
+              // const SizedBox(height: 64),
+              // // circular widget for image insertion
+              // Stack(
+              //   children: [
+              //     _image != null
+              //         ? CircleAvatar(
+              //             radius: 56,
+              //             backgroundImage: MemoryImage(_image!),
+              //           )
+              //         : const CircleAvatar(
+              //             radius: 56,
+              //             backgroundImage: NetworkImage(
+              //                 'https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg'),
+              //           ),
+              //     Positioned(
+              //         bottom: -13,
+              //         left: 80,
+              //         child: IconButton(
+              //           onPressed: selectImage,
+              //           icon: const Icon(
+              //             Icons.add_a_photo_sharp,
+              //             color: Colors.black45,
+              //           ),
+              //         ))
+              //   ],
+              // ),
+              // const SizedBox(
+              //   height: 24,
+              // ),
+              // // text field input for username
+              // TextFieldInput(
+              //   textEditingController: _usernameController,
+              //   hintText: 'Enter your username',
+              //   textInputType: TextInputType.text,
+              // ),
+              // const SizedBox(
+              //   height: 24,
+              // ),
+              // // text field email
+              // TextFieldInput(
+              //   textEditingController: _emailController,
+              //   hintText: 'Enter your email',
+              //   textInputType: TextInputType.emailAddress,
+              // ),
+              // const SizedBox(
+              //   height: 24,
+              // ),
+              // // text field for password
+              // TextFieldInput(
+              //   textEditingController: _passwordController,
+              //   hintText: 'Enter your password',
+              //   textInputType: TextInputType.text,
+              //   isPass: true,
+              // ),
+              // const SizedBox(
+              //   height: 24,
+              // ),
+              // // text field input for bio
+              // TextFieldInput(
+              //   textEditingController: _bioController,
+              //   hintText: 'Enter your bio',
+              //   textInputType: TextInputType.text,
+              // ),
+              // const SizedBox(
+              //   height: 24,
+              // ),
               // button login
               InkWell(
-                onTap: signUpUser,
+                onTap: navigatetoLogin,
                 child: Container(
                   child: _isLoading
                       ? const Center(
@@ -190,7 +207,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   decoration: const ShapeDecoration(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(
-                          Radius.circular(24),
+                          Radius.circular(78),
                         ),
                       ),
                       color: Colors.purple),
@@ -205,7 +222,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    child: const Text("Don't have an account? "),
+                    child: const Text("Already have an account? "),
                     padding: const EdgeInsets.symmetric(
                       vertical: 8,
                     ),
