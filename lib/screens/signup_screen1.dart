@@ -24,6 +24,8 @@ class _SignupScreenState extends State<SignupScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _bioController = TextEditingController();
+  final TextEditingController _neighborhoodController = TextEditingController();
+  final TextEditingController _cityController = TextEditingController();
   bool _isLoading = false;
   Uint8List? _image;
 
@@ -33,6 +35,8 @@ class _SignupScreenState extends State<SignupScreen> {
     _emailController.dispose();
     _passwordController.dispose();
     _usernameController.dispose();
+    _neighborhoodController.dispose();
+    _cityController.dispose();
   }
 
   void signUpUser() async {
@@ -47,6 +51,8 @@ class _SignupScreenState extends State<SignupScreen> {
         password: _passwordController.text,
         username: _usernameController.text,
         bio: _bioController.text,
+        neighborhood: _neighborhoodController.text,
+        city: _cityController.text,
         file: _image!);
     // if string returned is sucess, user has been created
     if (res == "success") {
@@ -102,18 +108,53 @@ class _SignupScreenState extends State<SignupScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              const SizedBox(height: 35),
               Align(
-                alignment: const Alignment(-0.5, 0.5),
+                alignment: const Alignment(-0.8, -0.5),
                 child: Text(
-                  'Select Your Neighborhood:',
+                  "Which City Do You Live In?",
                   style: TextStyle(
-                      fontSize: 25,
+                      fontSize: 24,
                       fontWeight: FontWeight.bold,
                       color: Colors.black),
                 ),
               ),
+              const SizedBox(height: 50),
+              // Align(
+              //   alignment: const Alignment(-0.9, 0.5),
+              //   child: Text(
+              //     'Neighborhood:',
+              //     style: TextStyle(
+              //         fontSize: 20,
+              //         fontWeight: FontWeight.normal,
+              //         color: Colors.black),
+              //   ),
+              // ),
+              TextFieldInput(
+                textEditingController: _cityController,
+                hintText: 'Enter your city',
+                textInputType: TextInputType.text,
+              ),
 
-              const SizedBox(height: 400),
+              const SizedBox(height: 50),
+              Align(
+                alignment: const Alignment(-0.9, -0.5),
+                child: Text(
+                  "Which Neighborhood?",
+                  style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
+              ),
+              const SizedBox(height: 50),
+              TextFieldInput(
+                textEditingController: _cityController,
+                hintText: 'Enter your neighborhood/area',
+                textInputType: TextInputType.text,
+              ),
+              const SizedBox(height: 175),
+
               // Flexible(child: Container(), flex: 2),
               // // svg image
               // SvgPicture.asset(
@@ -198,7 +239,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           ),
                         )
                       : const Text(
-                          'Sign Up',
+                          'Next',
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                   width: double.infinity,
@@ -233,8 +274,8 @@ class _SignupScreenState extends State<SignupScreen> {
                       child: const Text(
                         "Login",
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.underline),
                       ),
                       padding: const EdgeInsets.symmetric(
                         vertical: 8,

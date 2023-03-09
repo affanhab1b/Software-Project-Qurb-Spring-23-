@@ -16,6 +16,8 @@ class AuthMethods {
       required String password,
       required String username,
       required String bio,
+      required String neighborhood,
+      required String city,
       required Uint8List file}) async {
     String res = "Some Error Occured";
     try {
@@ -36,6 +38,8 @@ class AuthMethods {
           uid: cred.user!.uid,
           email: email,
           bio: bio,
+          neighborhood: neighborhood,
+          city: city,
           followers: [],
           following: [],
           photoUrl: photoUrl,

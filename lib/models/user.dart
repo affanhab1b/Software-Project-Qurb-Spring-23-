@@ -4,6 +4,8 @@ class User {
   final String photoUrl;
   final String username;
   final String bio;
+  final String neighborhood;
+  final String city;
   final List followers;
   final List following;
 
@@ -13,20 +15,21 @@ class User {
     required this.photoUrl,
     required this.username,
     required this.bio,
+    required this.neighborhood,
+    required this.city,
     required this.followers,
     required this.following,
-
   });
 
-  Map <String, dynamic> toJson() =>{
-    "username": username,
-    "uid": uid,
-    "email": email,
-    "photoUrl": photoUrl,
-    "bio": bio,
-    "followers": followers,
-    "following": following,
-  };
-  
-
+  Map<String, dynamic> toJson() => {
+        "username": username,
+        "uid": uid,
+        "email": email,
+        "photoUrl": photoUrl,
+        "bio": bio,
+        "neighborhood": neighborhood,
+        "city": city,
+        "followers": followers,
+        "following": following,
+      };
 }
