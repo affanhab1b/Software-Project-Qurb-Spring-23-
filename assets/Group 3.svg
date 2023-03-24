@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="130.594" height="29" viewBox="0 0 130.594 29">
+  <g id="Group_3" data-name="Group 3" transform="translate(-20.591 -92.5)">
+    <path id="Icon_awesome-home" data-name="Icon awesome-home" d="M18.151,9.777,6.215,19.608v10.61a1.036,1.036,0,0,0,1.036,1.036l7.255-.019A1.036,1.036,0,0,0,15.536,30.2V24a1.036,1.036,0,0,1,1.036-1.036h4.143A1.036,1.036,0,0,1,21.751,24v6.192a1.036,1.036,0,0,0,1.036,1.039l7.252.02a1.036,1.036,0,0,0,1.036-1.036V19.6L19.141,9.777A.789.789,0,0,0,18.151,9.777ZM37,16.459,31.593,12V3.03a.777.777,0,0,0-.777-.777H27.19a.777.777,0,0,0-.777.777v4.7l-5.8-4.769a3.107,3.107,0,0,0-3.949,0L.281,16.459a.777.777,0,0,0-.1,1.094L1.828,19.56a.777.777,0,0,0,.525.28c.205.02,32.837.053,33.11-.278l1.651-2.007a.777.777,0,0,0-.11-1.1Z" transform="translate(20.592 90.246)" fill="#820075"/>
+    <path id="Path_1" data-name="Path 1" d="M83.168,118" transform="translate(2.434 -25.5)" fill="none" stroke="#820075" stroke-linecap="round" stroke-width="4"/>
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(60.55 92.5)" fill="#fff" stroke="#820075" stroke-linecap="round" stroke-width="4">
+      <circle cx="14.5" cy="14.5" r="14.5" stroke="none"/>
+      <circle cx="14.5" cy="14.5" r="12.5" fill="none"/>
+    </g>
+    <line id="Line_1" data-name="Line 1" x2="4" y2="2" transform="translate(85.5 115.5)" fill="none" stroke="#820075" stroke-linecap="round" stroke-width="4"/>
+    <path id="Path_2" data-name="Path 2" d="M80.363,118v14.631H95.9V118" transform="translate(15.853 -14.69)" fill="none" stroke="#820075" stroke-linecap="round" stroke-width="4"/>
+    <g id="Group_1" data-name="Group 1" transform="translate(118.467 103.31)">
+      <path id="Path_3" data-name="Path 3" d="M100.594,121.858v14.631" transform="translate(-100.594 -121.858)" fill="none" stroke="#820075" stroke-linecap="round" stroke-width="4"/>
+      <path id="Path_4" data-name="Path 4" d="M-.183,3.131S1.966-.689,6.069-1.037a33.5,33.5,0,0,1,6.664,0" transform="translate(0.183 1.706)" fill="none" stroke="#820075" stroke-linecap="round" stroke-width="4"/>
+    </g>
+    <g id="Group_2" data-name="Group 2" transform="translate(137.099 92.5)">
+      <path id="Path_5" data-name="Path 5" d="M124.891,143.805v25.44h11.847s.973-7.642-1.988-11.06-9.858-2.611-9.858-2.611Z" transform="translate(-124.891 -143.805)" fill="none" stroke="#820075" stroke-linecap="round" stroke-width="4"/>
+    </g>
+  </g>
+</svg>

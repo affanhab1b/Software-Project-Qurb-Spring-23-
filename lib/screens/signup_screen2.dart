@@ -37,6 +37,8 @@ class _SignupScreenState2 extends State<SignupScreen2> {
     _emailController.dispose();
     _passwordController.dispose();
     _usernameController.dispose();
+    _neighborhoodController.dispose();
+    _cityController.dispose();
   }
 
   void signUpUser() async {

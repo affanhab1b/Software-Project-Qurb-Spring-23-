@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class User {
   final String email;
   final String uid;
@@ -32,4 +34,20 @@ class User {
         "followers": followers,
         "following": following,
       };
+
+  static User fromSnap(DocumentSnapshot snap) {
+    var snapshot = snap.data() as Map<String, dynamic>;
+
+    return User(
+      username: snapshot['username'],
+      email: snapshot['email'],
+      uid: snapshot['uid'],
+      photoUrl: snapshot['photoUrl'],
+      bio: snapshot['bio'],
+      neighborhood: snapshot['neighborhood'],
+      city: snapshot['city'],
+      followers: snapshot['followers'],
+      following: snapshot['following'],
+    );
+  }
 }

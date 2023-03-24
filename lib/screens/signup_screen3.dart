@@ -37,6 +37,8 @@ class _SignupScreenState3 extends State<SignupScreen3> {
     _emailController.dispose();
     _passwordController.dispose();
     _usernameController.dispose();
+    _neighborhoodController.dispose();
+    _cityController.dispose();
   }
 
   void signUpUser() async {
@@ -68,13 +70,14 @@ class _SignupScreenState3 extends State<SignupScreen3> {
           ),
         ),
       );
-    } else {
-      setState(() {
-        _isLoading = false;
-      });
-      // show the error
-      // showSnackBar(context, res);
     }
+    // } else {
+    //   setState(() {
+    //     _isLoading = false;
+    //   });
+    //   // show the error
+    //   // showSnackBar(context, res);
+    // }
   }
 
   selectImage() async {
@@ -293,7 +296,7 @@ class _SignupScreenState3 extends State<SignupScreen3> {
               // ),
               // button login
               InkWell(
-                onTap: navigatetoLogin,
+                onTap: signUpUser,
                 child: Container(
                   child: _isLoading
                       ? const Center(
