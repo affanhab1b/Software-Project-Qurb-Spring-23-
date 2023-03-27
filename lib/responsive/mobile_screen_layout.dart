@@ -47,34 +47,50 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
           Text('notif'),
           Text('profile'),
         ],
+        physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
         onPageChanged: onPageChanged,
       ),
       bottomNavigationBar: CupertinoTabBar(items: [
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: Icon(
+            Icons.home,
+            color: _page == 0 ? blueColor : Colors.grey,
+          ),
           label: '',
-          backgroundColor: primaryColor,
+          backgroundColor: blueColor,
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.search),
+          icon: Icon(
+            Icons.search,
+            color: _page == 1 ? blueColor : Colors.grey,
+          ),
           label: '',
-          backgroundColor: primaryColor,
+          backgroundColor: blueColor,
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.add_circle),
+          icon: Icon(
+            Icons.add_circle,
+            color: _page == 2 ? blueColor : Colors.grey,
+          ),
           label: '',
-          backgroundColor: primaryColor,
+          backgroundColor: blueColor,
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.favorite),
+          icon: Icon(
+            Icons.favorite,
+            color: _page == 3 ? blueColor : Colors.grey,
+          ),
           label: '',
-          backgroundColor: primaryColor,
+          backgroundColor: blueColor,
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.person),
+          icon: Icon(
+            Icons.person,
+            color: _page == 4 ? blueColor : Colors.grey,
+          ),
           label: '',
-          backgroundColor: primaryColor,
+          backgroundColor: blueColor,
         ),
       ], onTap: navigationTapped),
     );
