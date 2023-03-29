@@ -9,8 +9,6 @@ import 'package:testing/responsive/responsive_layout_screen.dart';
 import 'package:testing/responsive/web_screen_layout.dart';
 import 'package:testing/screens/login_screen.dart';
 import 'package:testing/screens/signup_screen1.dart';
-import 'package:testing/screens/signup_screen2.dart';
-import 'package:testing/screens/signup_screen3.dart';
 import 'package:testing/utils/colors.dart';
 
 void main() async {
@@ -44,38 +42,38 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Qurb App',
-        theme: ThemeData.light().copyWith(
-          scaffoldBackgroundColor: mobileBackgroundColor,
-        ),
-        // home: LoginScreen()
-        home: StreamBuilder(
-          stream: FirebaseAuth.instance.authStateChanges(),
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.active) {
-              if (snapshot.hasData) {
-                return const ResponsiveLayout(
-                  mobileScreenLayout: MobileScreenLayout(),
-                  webScreenLayout: WebScreenLayout(),
-                );
-              } else if (snapshot.hasError) {
-                return Center(
-                  child: Text('${snapshot.error}'),
-                );
-              }
-            }
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Center(
-                  child: CircularProgressIndicator(
-                color: primaryColor,
-              ));
-            }
+          debugShowCheckedModeBanner: false,
+          title: 'Qurb App',
+          theme: ThemeData.light().copyWith(
+            scaffoldBackgroundColor: mobileBackgroundColor,
+          ),
+          home: LoginScreen()
+          // home: StreamBuilder(
+          //   stream: FirebaseAuth.instance.authStateChanges(),
+          //   builder: (context, snapshot) {
+          //     if (snapshot.connectionState == ConnectionState.active) {
+          //       if (snapshot.hasData) {
+          //         return const ResponsiveLayout(
+          //           mobileScreenLayout: MobileScreenLayout(),
+          //           webScreenLayout: WebScreenLayout(),
+          //         );
+          //       } else if (snapshot.hasError) {
+          //         return Center(
+          //           child: Text('${snapshot.error}'),
+          //         );
+          //       }
+          //     }
+          //     if (snapshot.connectionState == ConnectionState.waiting) {
+          //       return const Center(
+          //           child: CircularProgressIndicator(
+          //         color: primaryColor,
+          //       ));
+          //     }
 
-            return const LoginScreen();
-          },
-        ),
-      ),
+          //     return const LoginScreen();
+          //   },
+          // ),
+          ),
     );
   }
 }

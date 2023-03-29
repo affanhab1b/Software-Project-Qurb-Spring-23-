@@ -11,7 +11,6 @@ import 'package:testing/utils/colors.dart';
 // import 'package:testing/utils/global_variable.dart';
 import 'package:testing/utils/utils.dart';
 import 'package:testing/widgets/text_field_input.dart';
-import 'package:testing/screens/signup_screen2.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({Key? key}) : super(key: key);
@@ -94,17 +93,18 @@ class _SignupScreenState extends State<SignupScreen> {
     );
   }
 
-  void navigatetoSignup2() {
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (context) => const SignupScreen2(),
-      ),
-    );
-  }
+  // void navigatetoSignup2() {
+  //   Navigator.of(context).push(
+  //     MaterialPageRoute(
+  //       builder: (context) => const SignupScreen2(),
+  //     ),
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: primaryColor2,
         // title: const Text('Select your Neighborhood:'),
@@ -115,25 +115,45 @@ class _SignupScreenState extends State<SignupScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(height: 35),
+              const SizedBox(height: 12),
               const Align(
-                alignment: const Alignment(-0.8, -0.5),
+                alignment: const Alignment(-0.95, -0.5),
                 child: Text(
-                  "Which City Do You Live In?",
+                  "Set a Profile Picture",
                   style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 22,
                       fontWeight: FontWeight.bold,
                       color: Colors.black),
                 ),
               ),
-              const SizedBox(height: 50),
-              TextFieldInput(
-                textEditingController: _cityController,
-                hintText: 'Enter your city',
-                textInputType: TextInputType.text,
+              const SizedBox(height: 8),
+              // circular widget for image insertion
+              Stack(
+                children: [
+                  _image != null
+                      ? CircleAvatar(
+                          radius: 56,
+                          backgroundImage: MemoryImage(_image!),
+                        )
+                      : const CircleAvatar(
+                          radius: 56,
+                          backgroundImage: NetworkImage(
+                              'https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg'),
+                        ),
+                  Positioned(
+                      bottom: -13,
+                      left: 80,
+                      child: IconButton(
+                        onPressed: selectImage,
+                        icon: const Icon(
+                          Icons.add_a_photo_sharp,
+                          color: Colors.black45,
+                        ),
+                      ))
+                ],
               ),
+              const SizedBox(height: 18),
 
-              const SizedBox(height: 50),
               const Align(
                 alignment: const Alignment(-0.9, -0.5),
                 child: Text(
@@ -144,13 +164,66 @@ class _SignupScreenState extends State<SignupScreen> {
                       color: Colors.black),
                 ),
               ),
-              const SizedBox(height: 50),
+              const SizedBox(height: 16),
               TextFieldInput(
                 textEditingController: _neighborhoodController,
                 hintText: 'Enter your neighborhood/area',
                 textInputType: TextInputType.text,
               ),
-              const SizedBox(height: 175),
+              const SizedBox(height: 10),
+              const Align(
+                alignment: const Alignment(-0.95, -0.5),
+                child: Text(
+                  "Username",
+                  style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
+              ),
+              const SizedBox(height: 12),
+              TextFieldInput(
+                textEditingController: _cityController,
+                hintText: 'Enter your username',
+                textInputType: TextInputType.text,
+              ),
+
+              const SizedBox(height: 10),
+              const Align(
+                alignment: const Alignment(-0.95, -0.5),
+                child: Text(
+                  "Email",
+                  style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
+              ),
+              const SizedBox(height: 10),
+              TextFieldInput(
+                textEditingController: _emailController,
+                hintText: 'Enter your email address',
+                textInputType: TextInputType.text,
+              ),
+              const SizedBox(height: 10),
+              const Align(
+                alignment: const Alignment(-0.95, -0.5),
+                child: Text(
+                  "Password",
+                  style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
+              ),
+              const SizedBox(height: 10),
+              TextFieldInput(
+                textEditingController: _passwordController,
+                hintText: 'Enter your password',
+                textInputType: TextInputType.text,
+                isPass: true,
+              ),
+              const SizedBox(height: 17),
 
               // Flexible(child: Container(), flex: 2),
               // // svg image
@@ -227,7 +300,7 @@ class _SignupScreenState extends State<SignupScreen> {
               // ),
               // button login
               InkWell(
-                onTap: navigatetoSignup2,
+                onTap: signUpUser,
                 child: Container(
                   child: _isLoading
                       ? const Center(
@@ -236,8 +309,9 @@ class _SignupScreenState extends State<SignupScreen> {
                           ),
                         )
                       : const Text(
-                          'Next',
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          'Sign Up',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, color: Colors.white),
                         ),
                   width: double.infinity,
                   alignment: Alignment.center,
@@ -245,16 +319,16 @@ class _SignupScreenState extends State<SignupScreen> {
                   decoration: const ShapeDecoration(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(
-                          Radius.circular(78),
+                          Radius.circular(54),
                         ),
                       ),
                       color: Colors.purple),
                 ),
               ),
               const SizedBox(
-                height: 12,
+                height: 8,
               ),
-              Flexible(child: Container(), flex: 2),
+              Flexible(child: Container(), flex: 1),
               // transitioning to signing up
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
