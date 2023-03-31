@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:testing/resources/auth_methods.dart';
-import 'package:testing/screens/signup_screen1.dart';
+// import 'package:testing/screens/signup_screen1.dart';
+import 'package:testing/screens/scroll_signup.dart';
 import 'package:testing/utils/utils.dart';
 import 'package:testing/utils/colors.dart';
 import 'package:testing/widgets/text_field_input.dart';
@@ -155,6 +156,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: const Text(
                         "Sign Up",
                         style: TextStyle(
+                            fontSize: 15,
                             fontWeight: FontWeight.bold,
                             decoration: TextDecoration.underline),
                       ),
