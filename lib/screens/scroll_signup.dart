@@ -39,7 +39,7 @@ class _SignupScreenState extends State<SignupScreen> {
     _cityController.dispose();
   }
 
-  void signUpUser() async {
+  void Signupuser() async {
     // set loading to true
     setState(() {
       _isLoading = true;
@@ -50,9 +50,9 @@ class _SignupScreenState extends State<SignupScreen> {
         email: _emailController.text,
         password: _passwordController.text,
         username: _usernameController.text,
-        bio: _bioController.text,
+        // bio: _bioController.text,
         neighborhood: _neighborhoodController.text,
-        city: _cityController.text,
+        // city: _cityController.text,
         file: _image!);
     // if string returned is sucess, user has been created
     if (res == "success") {
@@ -241,7 +241,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 // ),
                 // button login
                 InkWell(
-                  onTap: signUpUser,
+                  onTap: Signupuser,
                   child: Container(
                     child: _isLoading
                         ? const Center(

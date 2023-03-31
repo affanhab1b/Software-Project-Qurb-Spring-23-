@@ -5,9 +5,9 @@ class User {
   final String uid;
   final String photoUrl;
   final String username;
-  final String bio;
+  // final String bio;
   final String neighborhood;
-  final String city;
+  // final String city;
   final List followers;
   final List following;
 
@@ -16,9 +16,9 @@ class User {
     required this.uid,
     required this.photoUrl,
     required this.username,
-    required this.bio,
+    // required this.bio,
     required this.neighborhood,
-    required this.city,
+    // required this.city,
     required this.followers,
     required this.following,
   });
@@ -28,9 +28,9 @@ class User {
         "uid": uid,
         "email": email,
         "photoUrl": photoUrl,
-        "bio": bio,
+        // "bio": bio,
         "neighborhood": neighborhood,
-        "city": city,
+        // "city": city,
         "followers": followers,
         "following": following,
       };
@@ -43,9 +43,9 @@ class User {
       email: snapshot['email'],
       uid: snapshot['uid'],
       photoUrl: snapshot['photoUrl'],
-      bio: snapshot['bio'],
+      // bio: snapshot['bio'],
       neighborhood: snapshot['neighborhood'],
-      city: snapshot['city'],
+      // city: snapshot['city'],
       followers: snapshot['followers'],
       following: snapshot['following'],
     );

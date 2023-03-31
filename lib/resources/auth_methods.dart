@@ -24,16 +24,16 @@ class AuthMethods {
       {required String email,
       required String password,
       required String username,
-      required String bio,
+      // required String bio,
       required String neighborhood,
-      required String city,
+      // required String city,
       required Uint8List file}) async {
     String res = "Some Error Occured";
     try {
       if (email.isNotEmpty ||
           password.isNotEmpty ||
           username.isNotEmpty ||
-          bio.isNotEmpty) {
+          neighborhood.isNotEmpty) {
         // register user
         UserCredential cred = await _auth.createUserWithEmailAndPassword(
             email: email, password: password);
@@ -46,9 +46,9 @@ class AuthMethods {
           username: username,
           uid: cred.user!.uid,
           email: email,
-          bio: bio,
+          // bio: bio,
           neighborhood: neighborhood,
-          city: city,
+          // city: city,
           followers: [],
           following: [],
           photoUrl: photoUrl,
@@ -67,99 +67,99 @@ class AuthMethods {
     return res;
   }
 
-  Future<String> Signupuser2(
-      {required String email,
-      required String password,
-      required String username,
-      required String bio,
-      required String neighborhood,
-      required String city,
-      required Uint8List file}) async {
-    String res = "Some Error Occured";
-    try {
-      if (email.isNotEmpty ||
-          password.isNotEmpty ||
-          username.isNotEmpty ||
-          bio.isNotEmpty) {
-        // register user
-        UserCredential cred = await _auth.createUserWithEmailAndPassword(
-            email: email, password: password);
-        print(cred.user!.uid);
+  // Future<String> Signupuser2(
+  //     {required String email,
+  //     required String password,
+  //     required String username,
+  //     required String bio,
+  //     required String neighborhood,
+  //     required String city,
+  //     required Uint8List file}) async {
+  //   String res = "Some Error Occured";
+  //   try {
+  //     if (email.isNotEmpty ||
+  //         password.isNotEmpty ||
+  //         username.isNotEmpty ||
+  //         bio.isNotEmpty) {
+  //       // register user
+  //       UserCredential cred = await _auth.createUserWithEmailAndPassword(
+  //           email: email, password: password);
+  //       print(cred.user!.uid);
 
-        String photoUrl = await StorageMethods()
-            .uploadImageToStorage('ProfilePics', file, false);
+  //       String photoUrl = await StorageMethods()
+  //           .uploadImageToStorage('ProfilePics', file, false);
 
-        model.User user = model.User(
-          username: username,
-          uid: cred.user!.uid,
-          email: email,
-          bio: bio,
-          neighborhood: neighborhood,
-          city: city,
-          followers: [],
-          following: [],
-          photoUrl: photoUrl,
-        );
+  //       model.User user = model.User(
+  //         username: username,
+  //         uid: cred.user!.uid,
+  //         email: email,
+  //         bio: bio,
+  //         neighborhood: neighborhood,
+  //         city: city,
+  //         followers: [],
+  //         following: [],
+  //         photoUrl: photoUrl,
+  //       );
 
-        // add user to our database
-        await _firestore.collection('users').doc(cred.user!.uid).set(
-              user.toJson(),
-            );
+  //       // add user to our database
+  //       await _firestore.collection('users').doc(cred.user!.uid).set(
+  //             user.toJson(),
+  //           );
 
-        res = "Success";
-      }
-    } catch (err) {
-      res = err.toString();
-    }
-    return res;
-  }
+  //       res = "Success";
+  //     }
+  //   } catch (err) {
+  //     res = err.toString();
+  //   }
+  //   return res;
+  // }
 
-  Future<String> Signupuser3(
-      {required String email,
-      required String password,
-      required String username,
-      required String bio,
-      required String neighborhood,
-      required String city,
-      required Uint8List file}) async {
-    String res = "Some Error Occured";
-    try {
-      if (email.isNotEmpty ||
-          password.isNotEmpty ||
-          username.isNotEmpty ||
-          bio.isNotEmpty) {
-        // register user
-        UserCredential cred = await _auth.createUserWithEmailAndPassword(
-            email: email, password: password);
-        print(cred.user!.uid);
+  // Future<String> Signupuser3(
+  //     {required String email,
+  //     required String password,
+  //     required String username,
+  //     required String bio,
+  //     required String neighborhood,
+  //     required String city,
+  //     required Uint8List file}) async {
+  //   String res = "Some Error Occured";
+  //   try {
+  //     if (email.isNotEmpty ||
+  //         password.isNotEmpty ||
+  //         username.isNotEmpty ||
+  //         bio.isNotEmpty) {
+  //       // register user
+  //       UserCredential cred = await _auth.createUserWithEmailAndPassword(
+  //           email: email, password: password);
+  //       print(cred.user!.uid);
 
-        String photoUrl = await StorageMethods()
-            .uploadImageToStorage('ProfilePics', file, false);
+  //       String photoUrl = await StorageMethods()
+  //           .uploadImageToStorage('ProfilePics', file, false);
 
-        model.User user = model.User(
-          username: username,
-          uid: cred.user!.uid,
-          email: email,
-          bio: bio,
-          neighborhood: neighborhood,
-          city: city,
-          followers: [],
-          following: [],
-          photoUrl: photoUrl,
-        );
+  //       model.User user = model.User(
+  //         username: username,
+  //         uid: cred.user!.uid,
+  //         email: email,
+  //         bio: bio,
+  //         neighborhood: neighborhood,
+  //         city: city,
+  //         followers: [],
+  //         following: [],
+  //         photoUrl: photoUrl,
+  //       );
 
-        // add user to our database
-        await _firestore.collection('users').doc(cred.user!.uid).set(
-              user.toJson(),
-            );
+  //       // add user to our database
+  //       await _firestore.collection('users').doc(cred.user!.uid).set(
+  //             user.toJson(),
+  //           );
 
-        res = "Success";
-      }
-    } catch (err) {
-      res = err.toString();
-    }
-    return res;
-  }
+  //       res = "Success";
+  //     }
+  //   } catch (err) {
+  //     res = err.toString();
+  //   }
+  //   return res;
+  // }
 
   // logging in user
   Future<String> loginUser({
