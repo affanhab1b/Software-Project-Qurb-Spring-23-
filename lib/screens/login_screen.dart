@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:testing/resources/auth_methods.dart';
+import 'package:testing/screens/reset.dart';
 // import 'package:testing/screens/signup_screen1.dart';
 import 'package:testing/screens/scroll_signup.dart';
 import 'package:testing/utils/utils.dart';
@@ -139,6 +140,28 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(
                 height: 12,
               ),
+              // GestureDetector(
+              //   child: Text(
+              //     'Forgot Password?',
+              //     style: TextStyle(
+              //       decoration: TextDecoration.underline,
+              //       color: Colors.black,
+              //       fontSize: 18,
+              //     ),
+              //   ),
+              //   onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context)=> ResetScreen(),),
+              // ),
+                        Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextButton(
+                child: Text('Forgot Password?'),
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => ResetScreen()),
+                ),
+              )
+            ],
+          ),
               Flexible(child: Container(), flex: 2),
               // transitioning to signing up
               Row(
