@@ -48,32 +48,32 @@ class MyApp extends StatelessWidget {
         theme: ThemeData.light().copyWith(
           scaffoldBackgroundColor: mobileBackgroundColor,
         ),
-        home: LoginScreen(),
-        // home: StreamBuilder(
-        //   stream: FirebaseAuth.instance.authStateChanges(),
-        //   builder: (context, snapshot) {
-        //     if (snapshot.connectionState == ConnectionState.active) {
-        //       if (snapshot.hasData) {
-        //         return const ResponsiveLayout(
-        //           mobileScreenLayout: MobileScreenLayout(),
-        //           webScreenLayout: WebScreenLayout(),
-        //         );
-        //       } else if (snapshot.hasError) {
-        //         return Center(
-        //           child: Text('${snapshot.error}'),
-        //         );
-        //       }
-        //     }
-        //     if (snapshot.connectionState == ConnectionState.waiting) {
-        //       return const Center(
-        //           child: CircularProgressIndicator(
-        //         color: primaryColor,
-        //       ));
-        //     }
+        // home: LoginScreen(),
+        home: StreamBuilder(
+          stream: FirebaseAuth.instance.authStateChanges(),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.active) {
+              if (snapshot.hasData) {
+                return const ResponsiveLayout(
+                  mobileScreenLayout: MobileScreenLayout(),
+                  webScreenLayout: WebScreenLayout(),
+                );
+              } else if (snapshot.hasError) {
+                return Center(
+                  child: Text('${snapshot.error}'),
+                );
+              }
+            }
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(
+                  child: CircularProgressIndicator(
+                color: primaryColor,
+              ));
+            }
 
-        //     return const LoginScreen();
-        //   },
-        // ),
+            return const LoginScreen();
+          },
+        ),
       ),
     );
   }
