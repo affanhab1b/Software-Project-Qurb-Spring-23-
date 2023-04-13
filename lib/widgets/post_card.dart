@@ -3,6 +3,7 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:testing/providers/user_provider.dart';
 import 'package:testing/resources/firestore_methods.dart';
+import 'package:testing/screens/comments_screen.dart';
 import 'package:testing/utils/colors.dart';
 import 'package:testing/widgets/like_animation.dart';
 
@@ -152,7 +153,11 @@ class _PostCardState extends State<PostCard> {
                 ),
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => CommentsScreen(),
+                  ),
+                ),
                 icon: const Icon(
                   Icons.comment_outlined,
                 ),
