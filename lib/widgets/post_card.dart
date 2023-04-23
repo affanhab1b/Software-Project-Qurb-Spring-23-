@@ -89,31 +89,62 @@ class _PostCardState extends State<PostCard> {
                   onPressed: () {
                     showDialog(
                       context: context,
-                      builder: (context) => Dialog(
-                        child: ListView(
-                          padding: const EdgeInsets.symmetric(vertical: 16),
-                          shrinkWrap: true,
+                      builder: (context) {
+                        return SimpleDialog(
+                          title: const Text('Want to Delete Post?'),
                           children: [
-                            'Delete',
-                          ]
-                              .map(
-                                (e) => InkWell(
-                                  onTap: () async {
-                                    FirestoreMethods()
-                                        .deletePost(widget.snap['postId']);
-                                    Navigator.of(context).pop();
-                                  },
-                                  child: Container(
-                                    padding: const EdgeInsets.symmetric(
-                                        vertical: 12, horizontal: 16),
-                                    child: Text(e),
-                                  ),
+                            SimpleDialogOption(
+                              padding: const EdgeInsets.all(20),
+                              child: const Text(
+                                'Delete',
+                                style: TextStyle(
+                                  color: Colors.red,
                                 ),
-                              )
-                              .toList(),
-                        ),
-                      ),
+                              ),
+                              onPressed: () async {
+                                FirestoreMethods()
+                                    .deletePost(widget.snap['postId']);
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                            SimpleDialogOption(
+                              padding: const EdgeInsets.all(20),
+                              child: const Text('Cancel'),
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                          ],
+                        );
+                      },
                     );
+                    // showDialog(
+                    //   context: context,
+                    //   builder: (context) => Dialog(
+                    //     child: ListView(
+                    //       padding: const EdgeInsets.symmetric(vertical: 16),
+                    //       shrinkWrap: true,
+                    //       children: [
+                    //         'Delete',
+                    //       ]
+                    //           .map(
+                    //             (e) => InkWell(
+                    //               onTap: () async {
+                    //                 FirestoreMethods()
+                    //                     .deletePost(widget.snap['postId']);
+                    //                 Navigator.of(context).pop();
+                    //               },
+                    //               child: Container(
+                    //                 padding: const EdgeInsets.symmetric(
+                    //                     vertical: 12, horizontal: 16),
+                    //                 child: Text(e),
+                    //               ),
+                    //             ),
+                    //           )
+                    //           .toList(),
+                    //     ),
+                    //   ),
+                    // );
                   },
                   icon: const Icon(Icons.more_horiz),
                 ),

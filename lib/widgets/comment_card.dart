@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:testing/resources/firestore_methods.dart';
 
 class CommentCard extends StatefulWidget {
   final snap;
@@ -72,6 +73,38 @@ class _CommentCardState extends State<CommentCard> {
                 ],
               ),
             ),
+          ),
+          IconButton(
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) => Dialog(
+                  child: ListView(
+                    padding: const EdgeInsets.symmetric(vertical: 12),
+                    shrinkWrap: true,
+                    children: [
+                      'Delete',
+                    ]
+                        .map(
+                          (e) => InkWell(
+                            onTap: () async {
+                              FirestoreMethods()
+                                  .deleteComment(widget.snap['commentId']);
+                              Navigator.of(context).pop();
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 12, horizontal: 16),
+                              child: Text(e),
+                            ),
+                          ),
+                        )
+                        .toList(),
+                  ),
+                ),
+              );
+            },
+            icon: const Icon(Icons.more_horiz),
           ),
         ],
       ),

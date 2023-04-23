@@ -101,4 +101,14 @@ class FirestoreMethods {
       print(err.toString());
     }
   }
+
+  // deleting comments
+
+  Future<void> deleteComment(String commentId) async {
+    try {
+      await _firestore.collection('comments').doc(commentId).delete();
+    } catch (err) {
+      print(err.toString());
+    }
+  }
 }
