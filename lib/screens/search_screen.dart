@@ -4,6 +4,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:testing/utils/colors.dart';
 
+import '../widgets/text_field_input.dart';
+
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
 
@@ -25,17 +27,64 @@ class _SearchScreenState extends State<SearchScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: mobileBackgroundColor,
-        title: TextFormField(
-          controller: searchController,
-          decoration: const InputDecoration(labelText: 'Search for a user'),
-          onFieldSubmitted: (String _) {
-            setState(() {
-              isShowUsers = true;
-            });
-          },
+        backgroundColor: Colors.purple,
+        centerTitle: true,
+        title: Center(
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: SvgPicture.asset(
+              'assets/Group 3.svg',
+              color: Colors.white,
+              height: 32,
+            ),
+          ),
+        ),
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(48.0),
+          child: SizedBox(
+            height: 48.0,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              child: TextFormField(
+                controller: searchController,
+                decoration: const InputDecoration(
+                  labelText: 'Search for a user',
+                  labelStyle: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 20,
+                    color: Colors.black87,
+                  ),
+                  prefixIcon: Icon(Icons.search),
+                  prefixIconConstraints: BoxConstraints(
+                    minWidth: 24,
+                    minHeight: 24,
+                  ),
+                ),
+                onFieldSubmitted: (String _) {
+                  setState(() {
+                    isShowUsers = true;
+                  });
+                },
+              ),
+            ),
+          ),
         ),
       ),
+
+      // appBar: AppBar(
+      //   backgroundColor: mobileBackgroundColor,
+      //   title: TextFormField(
+      //     controller: searchController,
+      //     decoration: const InputDecoration(labelText: 'Search for a user'),
+      //     onFieldSubmitted: (String _) {
+      //       setState(() {
+      //         isShowUsers = true;
+      //       });
+      //     },
+      //   ),
+      // ),
+
       body: isShowUsers
           ? FutureBuilder(
               future: FirebaseFirestore.instance

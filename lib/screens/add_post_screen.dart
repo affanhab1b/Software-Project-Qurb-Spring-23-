@@ -136,8 +136,8 @@ class _AddPostScreenState extends State<AddPostScreen> {
                 icon: const Icon(Icons.arrow_back),
                 onPressed: clearImage,
               ),
-              title: const Text('Post to'),
-              centerTitle: false,
+              // title: const Text('Post to'),
+              // centerTitle: false,
               actions: [
                 TextButton(
                   onPressed: () => postImage(
@@ -150,7 +150,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                     style: TextStyle(
                       color: Colors.blueAccent,
                       fontWeight: FontWeight.bold,
-                      fontSize: 16,
+                      fontSize: 18,
                     ),
                   ),
                 ),
