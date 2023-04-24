@@ -65,14 +65,6 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  // void navigatetoSignup2() {
-  //   Navigator.of(context).push(
-  //     MaterialPageRoute(
-  //       builder: (context) => const SignupScreen2(),
-  //     ),
-  //   );
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -140,28 +132,18 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(
                 height: 12,
               ),
-              // GestureDetector(
-              //   child: Text(
-              //     'Forgot Password?',
-              //     style: TextStyle(
-              //       decoration: TextDecoration.underline,
-              //       color: Colors.black,
-              //       fontSize: 18,
-              //     ),
-              //   ),
-              //   onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context)=> ResetScreen(),),
-              // ),
-                        Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              TextButton(
-                child: Text('Forgot Password?'),
-                onPressed: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => ResetScreen()),
-                ),
-              )
-            ],
-          ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextButton(
+                    child: Text('Forgot Password?'),
+                    onPressed: () => Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => ResetScreen()),
+                    ),
+                  )
+                ],
+              ),
               Flexible(child: Container(), flex: 2),
               // transitioning to signing up
               Row(

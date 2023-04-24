@@ -102,10 +102,6 @@ class _CommentsScreenState extends State<CommentsScreen> {
                     Icons.post_add_outlined,
                     size: 35,
                   ),
-                  // child: const Text(
-                  //   'Comment',
-                  //   style: TextStyle(color: Colors.blueAccent),
-                  // ),
                 ),
               ),
             ],

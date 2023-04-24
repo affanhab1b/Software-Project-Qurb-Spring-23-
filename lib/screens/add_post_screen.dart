@@ -136,8 +136,6 @@ class _AddPostScreenState extends State<AddPostScreen> {
                 icon: const Icon(Icons.arrow_back),
                 onPressed: clearImage,
               ),
-              // title: const Text('Post to'),
-              // centerTitle: false,
               actions: [
                 TextButton(
                   onPressed: () => postImage(
