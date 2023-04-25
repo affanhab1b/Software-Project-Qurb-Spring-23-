@@ -13,7 +13,5 @@ const homeScreenItems = [
   const SearchScreen(),
   const AddPostScreen(),
   const Text('notif'),
-  // ProfileScreen(
-  //   uid: FirebaseAuth.instance.currentUser!.uid,
-  // ),
+  ProfileScreen(),
 ];

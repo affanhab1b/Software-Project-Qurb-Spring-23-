@@ -6,36 +6,38 @@ import 'package:testing/utils/utils.dart';
 import '../widgets/follow_button.dart';
 
 class ProfileScreen extends StatefulWidget {
-  final String uid;
-  const ProfileScreen({Key? key, required this.uid}) : super(key: key);
+  // final String uid;
+  const ProfileScreen({
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-  var UserData = {};
-  @override
-  void initState() {
-    super.initState();
-    getData();
-  }
+  // var UserData = {};
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   getData();
+  // }
 
-  getData() async {
-    try {
-      var snap = await FirebaseFirestore.instance
-          .collection('users')
-          .doc(widget.uid)
-          .get();
-      UserData = snap.data()!;
-      setState(() {});
-    } catch (e) {
-      showSnackBar(
-        context as String,
-        e.toString() as BuildContext,
-      );
-    }
-  }
+  // getData() async {
+  //   try {
+  //     var snap = await FirebaseFirestore.instance
+  //         .collection('users')
+  //         .doc(widget.uid)
+  //         .get();
+  //     UserData = snap.data()!;
+  //     setState(() {});
+  //   } catch (e) {
+  //     showSnackBar(
+  //       context as String,
+  //       e.toString() as BuildContext,
+  //     );
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +45,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       appBar: AppBar(
         backgroundColor: Colors.purple,
         title: Text(
-          UserData['username'],
+          ('username'),
         ),
         centerTitle: false,
       ),
