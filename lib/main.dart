@@ -49,6 +49,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: mobileBackgroundColor,
         ),
         // home: LoginScreen(),
+        // home: SignupScreen(),
 
         home: StreamBuilder(
           stream: FirebaseAuth.instance.authStateChanges(),

@@ -177,7 +177,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
                 const SizedBox(height: 25),
                 TextFieldInput(
-                  textEditingController: _cityController,
+                  textEditingController: _usernameController,
                   hintText: 'Enter your username',
                   textInputType: TextInputType.text,
                 ),
@@ -268,7 +268,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     child: const Text(
                       "Login",
                       style: TextStyle(
-                          fontSize: 15,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
                           decoration: TextDecoration.underline),
                     ),

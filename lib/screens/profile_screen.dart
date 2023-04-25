@@ -1,22 +1,50 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:testing/utils/colors.dart';
+import 'package:testing/utils/utils.dart';
 
 import '../widgets/follow_button.dart';
 
 class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({super.key});
+  final String uid;
+  const ProfileScreen({Key? key, required this.uid}) : super(key: key);
 
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+  var UserData = {};
+  @override
+  void initState() {
+    super.initState();
+    getData();
+  }
+
+  getData() async {
+    try {
+      var snap = await FirebaseFirestore.instance
+          .collection('users')
+          .doc(widget.uid)
+          .get();
+      UserData = snap.data()!;
+      setState(() {});
+    } catch (e) {
+      showSnackBar(
+        context as String,
+        e.toString() as BuildContext,
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.purple,
-        title: Text('username'),
+        title: Text(
+          UserData['username'],
+        ),
         centerTitle: false,
       ),
       body: ListView(
@@ -32,7 +60,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       backgroundImage: NetworkImage(
                         'https://images.unsplash.com/photo-1682283543390-92e4b16461c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0NHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60',
                       ),
-                      radius: 30,
+                      radius: 31,
                     ),
                     Expanded(
                       flex: 1,
