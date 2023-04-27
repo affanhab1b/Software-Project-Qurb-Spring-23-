@@ -59,6 +59,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   children: [
                     CircleAvatar(
                       backgroundColor: Colors.grey,
+                      // Using unspalsh API
                       backgroundImage: NetworkImage(
                         'https://images.unsplash.com/photo-1682283543390-92e4b16461c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0NHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60',
                       ),
