@@ -67,7 +67,7 @@ class _CommentsScreenState extends State<CommentsScreen> {
                 backgroundImage: NetworkImage(
                   user.photoUrl,
                 ),
-                radius: 18,
+                radius: 10,
               ),
               Expanded(
                 child: Padding(
