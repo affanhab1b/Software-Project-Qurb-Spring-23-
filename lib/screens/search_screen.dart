@@ -6,6 +6,7 @@ import 'package:testing/utils/colors.dart';
 
 import '../widgets/text_field_input.dart';
 
+// extending search screen
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
 
