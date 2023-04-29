@@ -148,6 +148,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 hintText: 'Enter your email',
                 textInputType: TextInputType.emailAddress,
               ),
+              // size box
               const SizedBox(
                 height: 24,
               ),
