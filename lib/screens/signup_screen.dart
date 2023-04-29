@@ -12,6 +12,7 @@ import 'package:testing/utils/colors.dart';
 import 'package:testing/utils/utils.dart';
 import 'package:testing/widgets/text_field_input.dart';
 
+// Applying inheritance
 class SignupScreen extends StatefulWidget {
   const SignupScreen({Key? key}) : super(key: key);
 
