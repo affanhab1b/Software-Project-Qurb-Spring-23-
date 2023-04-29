@@ -5,6 +5,7 @@ import 'package:testing/utils/utils.dart';
 
 import '../widgets/follow_button.dart';
 
+// extending Profile screen
 class ProfileScreen extends StatefulWidget {
   // final String uid;
   const ProfileScreen({
