@@ -107,7 +107,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 height: 64,
               ),
               const SizedBox(height: 64),
-              // circular widget for image insertion
+              // circular widget for the image insertion
               Stack(
                 children: [
                   _image != null
