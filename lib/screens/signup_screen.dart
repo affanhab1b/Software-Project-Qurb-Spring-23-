@@ -34,7 +34,8 @@ class _SignupScreenState extends State<SignupScreen> {
     _passwordController.dispose();
     _usernameController.dispose();
   }
-
+  
+  // signing up user
   void signUpUser() async {
     // set loading to true
     setState(() {
