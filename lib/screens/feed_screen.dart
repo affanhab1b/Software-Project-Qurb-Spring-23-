@@ -19,6 +19,7 @@ class FeedScreen extends StatelessWidget {
           height: 32,
         ),
       ),
+      // Streaming to Firebase
       body: StreamBuilder(
         stream: FirebaseFirestore.instance.collection('posts').snapshots(),
         builder: (context,
