@@ -68,7 +68,7 @@ class _PostCardState extends State<PostCard> {
                     widget.snap['profImage'],
                   ),
                 ),
-                Expanded(
+                Expanded( 
                   child: Padding(
                     padding: const EdgeInsets.only(left: 8),
                     child: Column(
