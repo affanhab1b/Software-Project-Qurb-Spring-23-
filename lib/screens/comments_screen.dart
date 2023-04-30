@@ -14,6 +14,7 @@ class CommentsScreen extends StatefulWidget {
   State<CommentsScreen> createState() => _CommentsScreenState();
 }
 
+// extending comment screen
 class _CommentsScreenState extends State<CommentsScreen> {
   final TextEditingController _commentController = TextEditingController();
 
