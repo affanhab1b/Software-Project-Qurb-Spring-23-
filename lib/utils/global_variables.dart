@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:testing/screens/add_post_screen.dart';
 import 'package:testing/screens/feed_screen.dart';
@@ -12,6 +13,5 @@ const homeScreenItems = [
   const FeedScreen(),
   const SearchScreen(),
   const AddPostScreen(),
-  const Text('notif'),
-  ProfileScreen(),
+  const ProfileScreen(),
 ];

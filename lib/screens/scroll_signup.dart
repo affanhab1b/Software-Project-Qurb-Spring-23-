@@ -5,7 +5,6 @@ import 'package:image_picker/image_picker.dart';
 import 'package:testing/resources/auth_methods.dart';
 import 'package:testing/responsive/mobile_screen_layout.dart';
 import 'package:testing/responsive/responsive_layout_screen.dart';
-import 'package:testing/responsive/web_screen_layout.dart';
 import 'package:testing/screens/login_screen.dart';
 import 'package:testing/utils/colors.dart';
 // import 'package:testing/utils/global_variable.dart';
@@ -64,7 +63,7 @@ class _SignupScreenState extends State<SignupScreen> {
         MaterialPageRoute(
           builder: (context) => const ResponsiveLayout(
             mobileScreenLayout: MobileScreenLayout(),
-            webScreenLayout: WebScreenLayout(),
+
           ),
         ),
       );

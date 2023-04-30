@@ -6,9 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:testing/providers/user_provider.dart';
 import 'package:testing/responsive/mobile_screen_layout.dart';
 import 'package:testing/responsive/responsive_layout_screen.dart';
-import 'package:testing/responsive/web_screen_layout.dart';
 import 'package:testing/screens/login_screen.dart';
-// import 'package:testing/screens/signup_screen1.dart';
 import 'package:testing/screens/scroll_signup.dart';
 import 'package:testing/utils/colors.dart';
 
@@ -58,7 +56,6 @@ class MyApp extends StatelessWidget {
               if (snapshot.hasData) {
                 return const ResponsiveLayout(
                   mobileScreenLayout: MobileScreenLayout(),
-                  webScreenLayout: WebScreenLayout(),
                 );
               } else if (snapshot.hasError) {
                 return Center(

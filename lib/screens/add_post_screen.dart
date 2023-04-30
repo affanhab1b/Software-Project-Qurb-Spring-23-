@@ -1,6 +1,7 @@
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import 'package:testing/models/user.dart';
@@ -51,8 +52,8 @@ class _AddPostScreenState extends State<AddPostScreen> {
     }
   }
 
-  _selectImage(BuildContext context) async {
-    return showDialog(
+  void _selectImageFromBottomNav() async {
+    showDialog(
       context: context,
       builder: (context) {
         return SimpleDialog(
@@ -66,11 +67,9 @@ class _AddPostScreenState extends State<AddPostScreen> {
                 Uint8List file = await pickImage(
                   ImageSource.camera,
                 );
-                setState(
-                  () {
-                    _file = file;
-                  },
-                );
+                setState(() {
+                  _file = file;
+                });
               },
             ),
             SimpleDialogOption(
@@ -81,11 +80,9 @@ class _AddPostScreenState extends State<AddPostScreen> {
                 Uint8List file = await pickImage(
                   ImageSource.gallery,
                 );
-                setState(
-                  () {
-                    _file = file;
-                  },
-                );
+                setState(() {
+                  _file = file;
+                });
               },
             ),
             SimpleDialogOption(
@@ -124,14 +121,25 @@ class _AddPostScreenState extends State<AddPostScreen> {
 
     return _file == null
         ? Center(
-            child: IconButton(
-              icon: const Icon(Icons.upload),
-              onPressed: () => _selectImage(context),
+            child: Container(
+              alignment: Alignment.bottomRight,
+              padding: EdgeInsets.only(bottom: 20, right: 20),
+              child: FloatingActionButton(
+                backgroundColor: Colors.purple,
+                child: const Icon(Icons.add),
+                onPressed: () => _selectImageFromBottomNav(),
+              ),
             ),
           )
         : Scaffold(
             appBar: AppBar(
               backgroundColor: Colors.purple,
+              centerTitle: true,
+              title: SvgPicture.asset(
+                'assets/Group 3.svg',
+                color: primaryColor,
+                height: 32,
+              ),
               leading: IconButton(
                 icon: const Icon(Icons.arrow_back),
                 onPressed: clearImage,
@@ -168,7 +176,6 @@ class _AddPostScreenState extends State<AddPostScreen> {
                   children: [
                     CircleAvatar(
                       backgroundImage: NetworkImage(
-                        // 'https://plus.unsplash.com/premium_photo-1676310601649-c0a78a17cc20?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
                         user.photoUrl,
                       ),
                     ),

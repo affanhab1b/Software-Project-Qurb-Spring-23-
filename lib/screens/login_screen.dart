@@ -9,7 +9,6 @@ import 'package:testing/utils/colors.dart';
 import 'package:testing/widgets/text_field_input.dart';
 import 'package:testing/responsive/responsive_layout_screen.dart';
 import 'package:testing/responsive/mobile_screen_layout.dart';
-import 'package:testing/responsive/web_screen_layout.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -44,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
         MaterialPageRoute(
             builder: (context) => const ResponsiveLayout(
                   mobileScreenLayout: MobileScreenLayout(),
-                  webScreenLayout: WebScreenLayout(),
+             
                 )),
       );
       //

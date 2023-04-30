@@ -4,11 +4,10 @@ import 'package:testing/providers/user_provider.dart';
 import 'package:testing/utils/global_variables.dart';
 
 class ResponsiveLayout extends StatefulWidget {
-  final Widget webScreenLayout;
+
   final Widget mobileScreenLayout;
   const ResponsiveLayout({
     Key? key,
-    required this.webScreenLayout,
     required this.mobileScreenLayout,
   }) : super(key: key);
 
@@ -32,9 +31,7 @@ class _ResponsiveLayoutState extends State<ResponsiveLayout> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth > webScreenSize) {
-          return widget.webScreenLayout;
-        }
+
         return widget.mobileScreenLayout;
       },
     );
