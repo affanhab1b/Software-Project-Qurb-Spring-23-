@@ -10,7 +10,7 @@ A hyperlocal social media app built using Flutter and Firebase. Works only on An
 - Share and displaying posts with a caption
 - Liking & Commenting on posts
 - Searching Users
-- Displaaying user posts on feed screen
+- Displaying user posts on feed screen
 - Signing out
 
 ## Tips for a smooth experience
