@@ -157,7 +157,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                 ),
                 const SizedBox(height: 25),
-                TextFieldInput(
+                TextInput(
                   textEditingController: _neighborhoodController,
                   hintText: 'Enter your neighborhood/area',
                   textInputType: TextInputType.text,
@@ -174,7 +174,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                 ),
                 const SizedBox(height: 25),
-                TextFieldInput(
+                TextInput(
                   textEditingController: _usernameController,
                   hintText: 'Enter your username',
                   textInputType: TextInputType.text,
@@ -192,7 +192,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                 ),
                 const SizedBox(height: 25),
-                TextFieldInput(
+                TextInput(
                   textEditingController: _emailController,
                   hintText: 'Enter your email address',
                   textInputType: TextInputType.text,
@@ -209,7 +209,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                 ),
                 const SizedBox(height: 23),
-                TextFieldInput(
+                TextInput(
                   textEditingController: _passwordController,
                   hintText: 'Enter your password',
                   textInputType: TextInputType.text,
