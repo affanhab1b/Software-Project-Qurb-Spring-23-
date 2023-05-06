@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:testing/models/usermodel.dart';
-import 'package:testing/resources/auth_methods.dart';
+import 'package:testing/backend/auth.dart';
 
 class UserProvider with ChangeNotifier {
   User? _user;

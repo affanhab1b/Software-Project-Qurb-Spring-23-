@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:testing/utils/colors.dart';
-import 'package:testing/utils/global_variables.dart';
+import 'package:testing/utils/global.dart';
 
 class MobileScreenLayout extends StatefulWidget {
   const MobileScreenLayout({super.key});
@@ -27,11 +26,11 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
     pageController.dispose();
   }
 
-  void navigationTapped(int page) {
+  void navigationTap(int page) {
     pageController.jumpToPage(page);
   }
 
-  void onPageChanged(int page) {
+  void OnPageChange(int page) {
     setState(() {
       _page = page;
     });
@@ -44,42 +43,42 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
         children: homeScreenItems,
         physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
-        onPageChanged: onPageChanged,
+        onPageChanged: OnPageChange,
       ),
       bottomNavigationBar: CupertinoTabBar(items: [
         BottomNavigationBarItem(
           icon: Icon(
             Icons.home,
-            color: _page == 0 ? blueColor : Colors.grey,
+            color: _page == 0 ? Colors.blue : Colors.grey,
           ),
           label: '',
-          backgroundColor: blueColor,
+          backgroundColor: Colors.blue,
         ),
         BottomNavigationBarItem(
           icon: Icon(
             Icons.search,
-            color: _page == 1 ? blueColor : Colors.grey,
+            color: _page == 1 ? Colors.blue : Colors.grey,
           ),
           label: '',
-          backgroundColor: blueColor,
+          backgroundColor: Colors.blue,
         ),
         BottomNavigationBarItem(
           icon: Icon(
             Icons.add_circle,
-            color: _page == 2 ? blueColor : Colors.grey,
+            color: _page == 2 ? Colors.blue : Colors.grey,
           ),
           label: '',
-          backgroundColor: blueColor,
+          backgroundColor: Colors.blue,
         ),
         BottomNavigationBarItem(
           icon: Icon(
             Icons.person,
-            color: _page == 3 ? blueColor : Colors.grey,
+            color: _page == 3 ? Colors.blue : Colors.grey,
           ),
           label: '',
-          backgroundColor: blueColor,
+          backgroundColor: Colors.blue,
         ),
-      ], onTap: navigationTapped),
+      ], onTap: navigationTap),
     );
   }
 }

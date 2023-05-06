@@ -1,8 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:testing/utils/colors.dart';
-import 'package:testing/widgets/post_card.dart';
+import 'package:testing/widgets/posttemplate.dart';
 
 class FeedScreen extends StatelessWidget {
   const FeedScreen({super.key});
@@ -15,7 +14,7 @@ class FeedScreen extends StatelessWidget {
         centerTitle: true,
         title: SvgPicture.asset(
           'assets/Applogo.svg',
-          color: primaryColor,
+          color: Colors.white,
           height: 32,
         ),
       ),

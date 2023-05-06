@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:testing/models/usermodel.dart';
 import 'package:testing/providers/user_provider.dart';
-import 'package:testing/resources/firestore_methods.dart';
-import 'package:testing/widgets/comment_card.dart';
+import 'package:testing/backend/firestore.dart';
+import 'package:testing/widgets/commentcard.dart';
 
 class CommentsScreen extends StatefulWidget {
   final snap;

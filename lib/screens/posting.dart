@@ -6,8 +6,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import 'package:testing/models/usermodel.dart';
 import 'package:testing/providers/user_provider.dart';
-import 'package:testing/resources/firestore_methods.dart';
-import 'package:testing/utils/colors.dart';
+import 'package:testing/backend/firestore.dart';
 import 'package:testing/utils/utils.dart';
 
 class AddPostScreen extends StatefulWidget {
@@ -61,7 +60,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
           children: [
             SimpleDialogOption(
               padding: const EdgeInsets.all(20),
-              child: const Text('Take a Photo'),
+              child: const Text('Take a photo'),
               onPressed: () async {
                 Navigator.of(context).pop();
                 Uint8List file = await pickImage(
@@ -137,7 +136,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
               centerTitle: true,
               title: SvgPicture.asset(
                 'assets/Applogo.svg',
-                color: primaryColor,
+                color: Colors.white,
                 height: 32,
               ),
               leading: IconButton(
@@ -184,7 +183,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                       child: TextField(
                         controller: _descriptionController,
                         decoration: const InputDecoration(
-                          hintText: 'Write a caption..',
+                          hintText: 'Write a caption...',
                           border: InputBorder.none,
                         ),
                         maxLines: 8,

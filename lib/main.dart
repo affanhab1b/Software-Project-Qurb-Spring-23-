@@ -6,9 +6,8 @@ import 'package:provider/provider.dart';
 import 'package:testing/providers/user_provider.dart';
 import 'package:testing/layouts/mobile_layout.dart';
 import 'package:testing/layouts/realtime_layout.dart';
-import 'package:testing/screens/login_screen.dart';
-import 'package:testing/screens/scroll_signup.dart';
-import 'package:testing/utils/colors.dart';
+import 'package:testing/screens/login.dart';
+import 'package:testing/screens/scrollsignup.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -44,7 +43,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Qurb App',
         theme: ThemeData.light().copyWith(
-          scaffoldBackgroundColor: mobileBackgroundColor,
+          scaffoldBackgroundColor: Colors.white,
         ),
         // home: LoginScreen(),
         // home: SignupScreen(),
@@ -66,7 +65,7 @@ class MyApp extends StatelessWidget {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Center(
                   child: CircularProgressIndicator(
-                color: primaryColor,
+                color: Colors.white,
               ));
             }
 

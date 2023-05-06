@@ -2,10 +2,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 // import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:testing/screens/add_post_screen.dart';
-import 'package:testing/screens/feed_screen.dart';
-import 'package:testing/screens/profile_screen.dart';
-import 'package:testing/screens/search_screen.dart';
+import 'package:testing/screens/posting.dart';
+import 'package:testing/screens/postfeed.dart';
+import 'package:testing/screens/userprofile.dart';
+import 'package:testing/screens/usersearch.dart';
 
 const webScreenSize = 600;
 

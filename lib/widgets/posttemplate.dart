@@ -3,11 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:testing/providers/user_provider.dart';
-import 'package:testing/resources/firestore_methods.dart';
-import 'package:testing/screens/comments_screen.dart';
-import 'package:testing/utils/colors.dart';
+import 'package:testing/backend/firestore.dart';
+import 'package:testing/screens/comments.dart';
 import 'package:testing/utils/utils.dart';
-import 'package:testing/widgets/like_animation.dart';
+import 'package:testing/widgets/likeanimation.dart';
 
 import '../models/usermodel.dart';
 
@@ -254,7 +253,7 @@ class _PostCardState extends State<PostCard> {
                       'View all $commentLen comments',
                       style: const TextStyle(
                         fontSize: 15,
-                        color: secondaryColor,
+                        color: Colors.grey,
                       ),
                     ),
                   ),
@@ -267,7 +266,7 @@ class _PostCardState extends State<PostCard> {
                     ),
                     style: const TextStyle(
                       fontSize: 12,
-                      color: secondaryColor,
+                      color: Colors.grey,
                     ),
                   ),
                 ),

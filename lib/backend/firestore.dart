@@ -2,7 +2,7 @@ import 'dart:typed_data';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:testing/models/postmodel.dart';
-import 'package:testing/resources/storage_methods.dart';
+import 'package:testing/backend/storage.dart';
 import 'package:uuid/uuid.dart';
 
 class FirestoreMethods {
@@ -20,7 +20,7 @@ class FirestoreMethods {
     String res = "some error occured";
     try {
       String photoUrl =
-          await StorageMethods().uploadImageToStorage('posts', file, true);
+          await StorageMethods().ImgtoStorage('posts', file, true);
 
       String postId = const Uuid().v1();
 

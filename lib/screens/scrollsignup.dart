@@ -2,14 +2,13 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:testing/resources/auth_methods.dart';
+import 'package:testing/backend/auth.dart';
 import 'package:testing/layouts/mobile_layout.dart';
 import 'package:testing/layouts/realtime_layout.dart';
-import 'package:testing/screens/login_screen.dart';
-import 'package:testing/utils/colors.dart';
+import 'package:testing/screens/login.dart';
 // import 'package:testing/utils/global_variable.dart';
 import 'package:testing/utils/utils.dart';
-import 'package:testing/widgets/text_field_input.dart';
+import 'package:testing/widgets/textinput.dart';
 
 //extending signup
 class SignupScreen extends StatefulWidget {
@@ -97,7 +96,7 @@ class _SignupScreenState extends State<SignupScreen> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        backgroundColor: primaryColor2,
+        backgroundColor: Colors.purple,
         title: const Text('Sign Up'),
         centerTitle: false,
       ),
@@ -224,7 +223,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     child: _isLoading
                         ? const Center(
                             child: CircularProgressIndicator(
-                              color: primaryColor,
+                              color: Colors.white,
                             ),
                           )
                         : const Text(

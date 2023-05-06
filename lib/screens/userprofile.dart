@@ -1,13 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:testing/utils/colors.dart';
 import 'package:testing/utils/utils.dart';
-import 'package:testing/resources/auth_methods.dart';
-import 'package:testing/resources/firestore_methods.dart';
+import 'package:testing/backend/auth.dart';
+import 'package:testing/backend/firestore.dart';
 
-import '../widgets/follow_button.dart';
-import 'login_screen.dart';
+import '../widgets/pfp.dart';
+import 'login.dart';
 
 // extending Profile screen
 class ProfileScreen extends StatefulWidget {
@@ -27,7 +26,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         centerTitle: true,
         title: SvgPicture.asset(
           'assets/Applogo.svg',
-          color: primaryColor,
+          color: Colors.white,
           height: 32,
         ),
       ),
@@ -54,17 +53,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              buildStatColumn(20, "posts"),
-                              buildStatColumn(150, "Connections"),
+                              UserStats(20, "posts"),
+                              UserStats(150, "Connections"),
                             ],
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              FollowButton(
+                              Pfpbutton(
                                 text: 'Sign Out',
                                 backgroundColor: Colors.purple,
-                                textColor: primaryColor,
+                                textColor: Colors.white,
                                 borderColor: Colors.purple,
                                 function: () async {
                                   showDialog(
@@ -141,7 +140,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  Column buildStatColumn(int num, String label) {
+  Column UserStats(int num, String label) {
     return Column(
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.center,

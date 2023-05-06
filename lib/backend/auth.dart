@@ -3,7 +3,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:testing/resources/storage_methods.dart';
+import 'package:testing/backend/storage.dart';
 import 'package:testing/models/usermodel.dart' as model;
 
 class AuthMethods {
@@ -40,7 +40,7 @@ class AuthMethods {
         print(cred.user!.uid);
 
         String photoUrl = await StorageMethods()
-            .uploadImageToStorage('ProfilePics', file, false);
+            .ImgtoStorage('ProfilePics', file, false);
 
         model.User user = model.User(
           username: username,

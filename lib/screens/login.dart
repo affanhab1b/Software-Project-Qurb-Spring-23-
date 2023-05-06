@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:testing/resources/auth_methods.dart';
-import 'package:testing/screens/reset.dart';
+import 'package:testing/backend/auth.dart';
+import 'package:testing/screens/resetpassword.dart';
 // import 'package:testing/screens/signup_screen1.dart';
-import 'package:testing/screens/scroll_signup.dart';
+import 'package:testing/screens/scrollsignup.dart';
 import 'package:testing/utils/utils.dart';
-import 'package:testing/utils/colors.dart';
-import 'package:testing/widgets/text_field_input.dart';
+import 'package:testing/widgets/textinput.dart';
 import 'package:testing/layouts/realtime_layout.dart';
 import 'package:testing/layouts/mobile_layout.dart';
 
@@ -78,7 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
               // svg image
               SvgPicture.asset(
                 'assets/Applogo.svg',
-                color: primaryColor2,
+                color: Colors.purple,
                 height: 52,
               ),
               const SizedBox(height: 64),
@@ -108,7 +107,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: _isLoading
                       ? const Center(
                           child: CircularProgressIndicator(
-                            color: primaryColor,
+                            color: Colors.white,
                           ),
                         )
                       : const Text(

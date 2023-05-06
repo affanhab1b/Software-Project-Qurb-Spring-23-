@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class FollowButton extends StatelessWidget {
+class Pfpbutton extends StatelessWidget {
   final Function()? function;
   final Color backgroundColor;
   final Color borderColor;
   final String text;
   final Color textColor;
-  const FollowButton(
+  const Pfpbutton(
       {Key? key,
       required this.backgroundColor,
       required this.borderColor,

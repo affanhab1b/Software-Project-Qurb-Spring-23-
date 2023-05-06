@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import 'package:testing/resources/firestore_methods.dart';
-import 'package:testing/widgets/like_animation.dart';
+import 'package:testing/backend/firestore.dart';
+import 'package:testing/widgets/likeanimation.dart';
 import '../models/usermodel.dart';
 import '../providers/user_provider.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:testing/providers/user_provider.dart';
-import 'package:testing/utils/global_variables.dart';
+import 'package:testing/utils/global.dart';
 
 class RealTimeLayout extends StatefulWidget {
   final Widget mobileScreenLayout;
