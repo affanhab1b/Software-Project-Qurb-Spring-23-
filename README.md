@@ -1,4 +1,4 @@
-# testing
+# Qurb Social Media App
 
 A new Flutter project.
 
