@@ -4,8 +4,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:testing/providers/user_provider.dart';
-import 'package:testing/responsive/mobile_layout.dart';
-import 'package:testing/responsive/responsive_layout_screen.dart';
+import 'package:testing/layouts/mobile_layout.dart';
+import 'package:testing/layouts/realtime_layout.dart';
 import 'package:testing/screens/login_screen.dart';
 import 'package:testing/screens/scroll_signup.dart';
 import 'package:testing/utils/colors.dart';
@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.active) {
               if (snapshot.hasData) {
-                return const ResponsiveLayout(
+                return const RealTimeLayout(
                   mobileScreenLayout: MobileScreenLayout(),
                 );
               } else if (snapshot.hasError) {

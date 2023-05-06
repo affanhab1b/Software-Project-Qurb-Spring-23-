@@ -3,7 +3,7 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:testing/resources/firestore_methods.dart';
 import 'package:testing/widgets/like_animation.dart';
-import '../models/user.dart';
+import '../models/usermodel.dart';
 import '../providers/user_provider.dart';
 
 class CommentCard extends StatefulWidget {

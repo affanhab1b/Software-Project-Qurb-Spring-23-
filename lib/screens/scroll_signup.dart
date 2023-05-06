@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:testing/resources/auth_methods.dart';
-import 'package:testing/responsive/mobile_layout.dart';
-import 'package:testing/responsive/responsive_layout_screen.dart';
+import 'package:testing/layouts/mobile_layout.dart';
+import 'package:testing/layouts/realtime_layout.dart';
 import 'package:testing/screens/login_screen.dart';
 import 'package:testing/utils/colors.dart';
 // import 'package:testing/utils/global_variable.dart';
 import 'package:testing/utils/utils.dart';
 import 'package:testing/widgets/text_field_input.dart';
 
-//extending signup 
+//extending signup
 class SignupScreen extends StatefulWidget {
   const SignupScreen({Key? key}) : super(key: key);
 
@@ -62,7 +62,7 @@ class _SignupScreenState extends State<SignupScreen> {
       // navigating to home screen
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => const ResponsiveLayout(
+          builder: (context) => const RealTimeLayout(
             mobileScreenLayout: MobileScreenLayout(),
           ),
         ),

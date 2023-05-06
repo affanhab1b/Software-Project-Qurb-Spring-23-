@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:testing/models/user.dart';
+import 'package:testing/models/usermodel.dart';
 import 'package:testing/providers/user_provider.dart';
 import 'package:testing/resources/firestore_methods.dart';
 import 'package:testing/widgets/comment_card.dart';
@@ -68,7 +68,7 @@ class _CommentsScreenState extends State<CommentsScreen> {
                 backgroundImage: NetworkImage(
                   user.photoUrl,
                 ),
-                radius: 10,
+                radius: 18,
               ),
               Expanded(
                 child: Padding(

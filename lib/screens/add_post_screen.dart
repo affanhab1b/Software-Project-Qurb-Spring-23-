@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
-import 'package:testing/models/user.dart';
+import 'package:testing/models/usermodel.dart';
 import 'package:testing/providers/user_provider.dart';
 import 'package:testing/resources/firestore_methods.dart';
 import 'package:testing/utils/colors.dart';
@@ -184,15 +184,15 @@ class _AddPostScreenState extends State<AddPostScreen> {
                       child: TextField(
                         controller: _descriptionController,
                         decoration: const InputDecoration(
-                          hintText: 'Write a caption',
+                          hintText: 'Write a caption...',
                           border: InputBorder.none,
                         ),
                         maxLines: 8,
                       ),
                     ),
                     SizedBox(
-                      height: 45,
-                      width: 45,
+                      height: 65,
+                      width: 65,
                       child: AspectRatio(
                         aspectRatio: 487 / 451,
                         child: Container(

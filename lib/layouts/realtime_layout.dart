@@ -3,18 +3,18 @@ import 'package:provider/provider.dart';
 import 'package:testing/providers/user_provider.dart';
 import 'package:testing/utils/global_variables.dart';
 
-class ResponsiveLayout extends StatefulWidget {
+class RealTimeLayout extends StatefulWidget {
   final Widget mobileScreenLayout;
-  const ResponsiveLayout({
+  const RealTimeLayout({
     Key? key,
     required this.mobileScreenLayout,
   }) : super(key: key);
 
   @override
-  State<ResponsiveLayout> createState() => _ResponsiveLayoutState();
+  State<RealTimeLayout> createState() => _RealTimeLayoutState();
 }
 
-class _ResponsiveLayoutState extends State<ResponsiveLayout> {
+class _RealTimeLayoutState extends State<RealTimeLayout> {
   @override
   void initState() {
     super.initState();

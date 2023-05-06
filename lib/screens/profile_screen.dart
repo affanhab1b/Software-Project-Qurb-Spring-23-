@@ -41,7 +41,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   children: [
                     CircleAvatar(
                       backgroundColor: Colors.grey,
-                      // Using unspalsh API
                       backgroundImage: NetworkImage(
                         'https://images.hdqwalls.com/wallpapers/tom-cruise-2018-32.jpg',
                       ),

@@ -9,7 +9,7 @@ import 'package:testing/utils/colors.dart';
 import 'package:testing/utils/utils.dart';
 import 'package:testing/widgets/like_animation.dart';
 
-import '../models/user.dart';
+import '../models/usermodel.dart';
 
 class PostCard extends StatefulWidget {
   final snap;
@@ -63,12 +63,12 @@ class _PostCardState extends State<PostCard> {
             child: Row(
               children: [
                 CircleAvatar(
-                  radius: 12,
+                  radius: 16,
                   backgroundImage: NetworkImage(
                     widget.snap['profImage'],
                   ),
                 ),
-                Expanded( 
+                Expanded(
                   child: Padding(
                     padding: const EdgeInsets.only(left: 8),
                     child: Column(

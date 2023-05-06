@@ -7,8 +7,8 @@ import 'package:testing/screens/scroll_signup.dart';
 import 'package:testing/utils/utils.dart';
 import 'package:testing/utils/colors.dart';
 import 'package:testing/widgets/text_field_input.dart';
-import 'package:testing/responsive/responsive_layout_screen.dart';
-import 'package:testing/responsive/mobile_layout.dart';
+import 'package:testing/layouts/realtime_layout.dart';
+import 'package:testing/layouts/mobile_layout.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -41,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
     if (res == "Success") {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => const ResponsiveLayout(
+          builder: (context) => const RealTimeLayout(
             mobileScreenLayout: MobileScreenLayout(),
           ),
         ),
