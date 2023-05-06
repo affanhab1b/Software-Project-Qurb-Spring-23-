@@ -2,15 +2,25 @@
 
 A hyperlocal social media app built using Flutter and Firebase. Works only on Android!
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+*EVERYTHING IN REALTIME
 
-A few resources to get you started if this is your first Flutter project:
+- Email & Password Authentication
+- Share and displaying posts with a caption
+- Liking & Commenting on posts
+- Searching Users
+- Displaaying user posts on feed screen
+- Signing out
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Tips for a smooth experience
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Run this app on devices with screen size of 5.8 inches and above.
+- If after entering the credentials for login/signup, the screen does not transition, try restarting the app and running it again. 
+
+
+## APIs/Tech Used
+
+### Server side: Firebase Auth, Firebase Storage, Firebase Firestore
+
+### Client side: Flutter, Provider
