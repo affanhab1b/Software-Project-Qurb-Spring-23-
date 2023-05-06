@@ -9,6 +9,7 @@ import 'package:testing/resources/firestore_methods.dart';
 import '../widgets/follow_button.dart';
 import 'login_screen.dart';
 
+// extending Profile screen
 class ProfileScreen extends StatefulWidget {
   // final String uid;
   const ProfileScreen({Key? key}) : super(key: key);
@@ -40,6 +41,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   children: [
                     CircleAvatar(
                       backgroundColor: Colors.grey,
+                      // Using unspalsh API
                       backgroundImage: NetworkImage(
                         'https://images.hdqwalls.com/wallpapers/tom-cruise-2018-32.jpg',
                       ),

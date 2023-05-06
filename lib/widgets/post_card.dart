@@ -63,7 +63,7 @@ class _PostCardState extends State<PostCard> {
             child: Row(
               children: [
                 CircleAvatar(
-                  radius: 16,
+                  radius: 12,
                   backgroundImage: NetworkImage(
                     widget.snap['profImage'],
                   ),

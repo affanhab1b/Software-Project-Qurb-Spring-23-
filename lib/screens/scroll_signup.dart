@@ -11,6 +11,7 @@ import 'package:testing/utils/colors.dart';
 import 'package:testing/utils/utils.dart';
 import 'package:testing/widgets/text_field_input.dart';
 
+//extending signup 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({Key? key}) : super(key: key);
 
@@ -58,7 +59,7 @@ class _SignupScreenState extends State<SignupScreen> {
       setState(() {
         _isLoading = false;
       });
-      // navigate to the home screen
+      // navigating to home screen
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (context) => const ResponsiveLayout(

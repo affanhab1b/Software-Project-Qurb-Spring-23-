@@ -6,6 +6,7 @@ import 'package:testing/utils/colors.dart';
 
 import '../widgets/text_field_input.dart';
 
+// extending search screen
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
 
@@ -13,6 +14,7 @@ class SearchScreen extends StatefulWidget {
   State<SearchScreen> createState() => _SearchScreenState();
 }
 
+//extending
 class _SearchScreenState extends State<SearchScreen> {
   final TextEditingController searchController = TextEditingController();
   bool isShowUsers = false;

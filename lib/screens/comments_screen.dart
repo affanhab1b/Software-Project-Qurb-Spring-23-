@@ -14,6 +14,7 @@ class CommentsScreen extends StatefulWidget {
   State<CommentsScreen> createState() => _CommentsScreenState();
 }
 
+// extending comment screen
 class _CommentsScreenState extends State<CommentsScreen> {
   final TextEditingController _commentController = TextEditingController();
 
@@ -67,7 +68,7 @@ class _CommentsScreenState extends State<CommentsScreen> {
                 backgroundImage: NetworkImage(
                   user.photoUrl,
                 ),
-                radius: 18,
+                radius: 10,
               ),
               Expanded(
                 child: Padding(
