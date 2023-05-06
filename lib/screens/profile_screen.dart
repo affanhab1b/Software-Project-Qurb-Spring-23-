@@ -25,7 +25,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         backgroundColor: Colors.purple,
         centerTitle: true,
         title: SvgPicture.asset(
-          'assets/Group 3.svg',
+          'assets/Applogo.svg',
           color: primaryColor,
           height: 32,
         ),
@@ -41,7 +41,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     CircleAvatar(
                       backgroundColor: Colors.grey,
                       backgroundImage: NetworkImage(
-                        'https://images.unsplash.com/photo-1682283543390-92e4b16461c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0NHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60',
+                        'https://images.hdqwalls.com/wallpapers/tom-cruise-2018-32.jpg',
                       ),
                       radius: 31,
                     ),

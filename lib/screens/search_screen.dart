@@ -33,7 +33,7 @@ class _SearchScreenState extends State<SearchScreen> {
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: SvgPicture.asset(
-              'assets/Group 3.svg',
+              'assets/Applogo.svg',
               color: Colors.white,
               height: 32,
             ),

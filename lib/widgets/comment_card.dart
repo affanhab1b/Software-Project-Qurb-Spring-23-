@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 import 'package:testing/resources/firestore_methods.dart';
+import 'package:testing/widgets/like_animation.dart';
+import '../models/user.dart';
+import '../providers/user_provider.dart';
 
 class CommentCard extends StatefulWidget {
   final snap;
@@ -16,6 +20,7 @@ class CommentCard extends StatefulWidget {
 class _CommentCardState extends State<CommentCard> {
   @override
   Widget build(BuildContext context) {
+    final User user = Provider.of<UserProvider>(context).getUser;
     return Container(
       color: Colors.black38,
       padding: const EdgeInsets.symmetric(
@@ -72,6 +77,13 @@ class _CommentCardState extends State<CommentCard> {
                   ),
                 ],
               ),
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            child: const Icon(
+              Icons.thumb_up_sharp,
+              size: 16,
             ),
           ),
           IconButton(

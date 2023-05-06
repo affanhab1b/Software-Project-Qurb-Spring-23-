@@ -8,7 +8,7 @@ import 'package:testing/utils/utils.dart';
 import 'package:testing/utils/colors.dart';
 import 'package:testing/widgets/text_field_input.dart';
 import 'package:testing/responsive/responsive_layout_screen.dart';
-import 'package:testing/responsive/mobile_screen_layout.dart';
+import 'package:testing/responsive/mobile_layout.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -41,10 +41,10 @@ class _LoginScreenState extends State<LoginScreen> {
     if (res == "Success") {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-            builder: (context) => const ResponsiveLayout(
-                  mobileScreenLayout: MobileScreenLayout(),
-             
-                )),
+          builder: (context) => const ResponsiveLayout(
+            mobileScreenLayout: MobileScreenLayout(),
+          ),
+        ),
       );
       //
     } else {
@@ -77,7 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Flexible(child: Container(), flex: 2),
               // svg image
               SvgPicture.asset(
-                'assets/Group 3.svg',
+                'assets/Applogo.svg',
                 color: primaryColor2,
                 height: 52,
               ),

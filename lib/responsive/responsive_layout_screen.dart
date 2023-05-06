@@ -4,7 +4,6 @@ import 'package:testing/providers/user_provider.dart';
 import 'package:testing/utils/global_variables.dart';
 
 class ResponsiveLayout extends StatefulWidget {
-
   final Widget mobileScreenLayout;
   const ResponsiveLayout({
     Key? key,
@@ -31,7 +30,6 @@ class _ResponsiveLayoutState extends State<ResponsiveLayout> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-
         return widget.mobileScreenLayout;
       },
     );

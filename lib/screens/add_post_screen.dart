@@ -136,7 +136,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
               backgroundColor: Colors.purple,
               centerTitle: true,
               title: SvgPicture.asset(
-                'assets/Group 3.svg',
+                'assets/Applogo.svg',
                 color: primaryColor,
                 height: 32,
               ),

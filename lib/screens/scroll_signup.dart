@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:testing/resources/auth_methods.dart';
-import 'package:testing/responsive/mobile_screen_layout.dart';
+import 'package:testing/responsive/mobile_layout.dart';
 import 'package:testing/responsive/responsive_layout_screen.dart';
 import 'package:testing/screens/login_screen.dart';
 import 'package:testing/utils/colors.dart';
@@ -63,7 +63,6 @@ class _SignupScreenState extends State<SignupScreen> {
         MaterialPageRoute(
           builder: (context) => const ResponsiveLayout(
             mobileScreenLayout: MobileScreenLayout(),
-
           ),
         ),
       );
@@ -98,7 +97,7 @@ class _SignupScreenState extends State<SignupScreen> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: primaryColor2,
-        // title: const Text('Select your Neighborhood:'),
+        title: const Text('Sign Up'),
         centerTitle: false,
       ),
       body: Center(
@@ -145,7 +144,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         ))
                   ],
                 ),
-                const SizedBox(height: 50),
+                const SizedBox(height: 25),
 
                 const Align(
                   alignment: const Alignment(-0.95, -0.5),
@@ -163,7 +162,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   hintText: 'Enter your neighborhood/area',
                   textInputType: TextInputType.text,
                 ),
-                const SizedBox(height: 50),
+                const SizedBox(height: 25),
                 const Align(
                   alignment: const Alignment(-0.95, -0.5),
                   child: Text(
@@ -181,7 +180,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   textInputType: TextInputType.text,
                 ),
 
-                const SizedBox(height: 50),
+                const SizedBox(height: 25),
                 const Align(
                   alignment: const Alignment(-0.95, -0.5),
                   child: Text(
@@ -198,7 +197,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   hintText: 'Enter your email address',
                   textInputType: TextInputType.text,
                 ),
-                const SizedBox(height: 50),
+                const SizedBox(height: 23),
                 const Align(
                   alignment: const Alignment(-0.95, -0.5),
                   child: Text(
@@ -209,7 +208,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         color: Colors.black),
                   ),
                 ),
-                const SizedBox(height: 25),
+                const SizedBox(height: 23),
                 TextFieldInput(
                   textEditingController: _passwordController,
                   hintText: 'Enter your password',
@@ -218,7 +217,6 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
                 const SizedBox(height: 140),
 
-                // button login
                 InkWell(
                   onTap: Signupuser,
                   child: Container(
@@ -250,7 +248,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   height: 25,
                 ),
 
-                // transitioning to signing up
+                // transitioning to login
                 const Align(
                   alignment: const Alignment(-0.95, -0.5),
                   child: Text(
