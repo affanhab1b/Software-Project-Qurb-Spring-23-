@@ -1,6 +1,6 @@
 # Qurb Social Media App
 
-A new Flutter project.
+A hyperlocal social media app built using Flutter and Firebase. Works only on Android!
 
 ## Getting Started
 
