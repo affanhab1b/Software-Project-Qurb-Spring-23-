@@ -184,7 +184,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                       child: TextField(
                         controller: _descriptionController,
                         decoration: const InputDecoration(
-                          hintText: 'Write a caption...',
+                          hintText: 'Write a caption..',
                           border: InputBorder.none,
                         ),
                         maxLines: 8,
