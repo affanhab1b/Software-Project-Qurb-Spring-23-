@@ -146,19 +146,6 @@ class _PostCardState extends State<PostCard> {
                 AnimatedOpacity(
                   duration: const Duration(milliseconds: 200),
                   opacity: isLikeAnimating ? 1 : 0,
-                  child: LikeAnimation(
-                    child: const Icon(Icons.thumb_up_off_alt_sharp,
-                        color: Colors.white, size: 100),
-                    isAnimating: isLikeAnimating,
-                    duration: const Duration(
-                      milliseconds: 200,
-                    ),
-                    onEnd: () {
-                      setState(() {
-                        isLikeAnimating = false;
-                      });
-                    },
-                  ),
                 )
               ],
             ),

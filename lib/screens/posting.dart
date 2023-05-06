@@ -22,7 +22,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
 
   bool _isLoading = false;
 
-  void postImage(
+  void postimg(
     String uid,
     String username,
     String profImage,
@@ -39,7 +39,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
         });
 
         showSnackBar('Posted!', context);
-        clearImage();
+        popimg();
       } else {
         setState(() {
           _isLoading = false;
@@ -49,6 +49,12 @@ class _AddPostScreenState extends State<AddPostScreen> {
     } catch (e) {
       showSnackBar(e.toString(), context);
     }
+  }
+
+  void popimg() {
+    setState(() {
+      _file = null;
+    });
   }
 
   void _selectImageFromBottomNav() async {
@@ -102,12 +108,6 @@ class _AddPostScreenState extends State<AddPostScreen> {
     );
   }
 
-  void clearImage() {
-    setState(() {
-      _file = null;
-    });
-  }
-
   @override
   void dispose() {
     super.dispose();
@@ -141,11 +141,11 @@ class _AddPostScreenState extends State<AddPostScreen> {
               ),
               leading: IconButton(
                 icon: const Icon(Icons.arrow_back),
-                onPressed: clearImage,
+                onPressed: popimg,
               ),
               actions: [
                 TextButton(
-                  onPressed: () => postImage(
+                  onPressed: () => postimg(
                     user.uid,
                     user.username,
                     user.photoUrl,

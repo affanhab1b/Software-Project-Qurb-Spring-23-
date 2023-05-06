@@ -42,11 +42,11 @@ class _LikeAnimationState extends State<LikeAnimation>
     super.didUpdateWidget(oldWidget);
 
     if (widget.isAnimating != oldWidget.isAnimating) {
-      startAnimation();
+      Animstart();
     }
   }
 
-  startAnimation() async {
+  Animstart() async {
     if (widget.isAnimating || widget.smallLike) {
       await controller.forward();
       await controller.reverse();

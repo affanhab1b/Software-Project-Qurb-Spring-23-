@@ -77,7 +77,7 @@ class _SignupScreenState extends State<SignupScreen> {
 
   selectImage() async {
     Uint8List im = await pickImage(ImageSource.gallery);
-    // set state because we need to display the image we selected on the circle avatar
+
     setState(() {
       _image = im;
     });
@@ -119,7 +119,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                 ),
                 const SizedBox(height: 12),
-                // circular widget for image insertion
+                // circular widget for image insert
                 Stack(
                   children: [
                     _image != null
