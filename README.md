@@ -19,6 +19,7 @@ A hyperlocal social media app built using Flutter and Firebase. Works only on An
 
 - Run this app on devices with screen size of 5.8 inches and above.
 - If after entering the credentials for login/signup, the screen does not transition, try restarting the app and running it again. 
+- Stay connected to the internet to ensure smooth experience.
 
 
 ## APIs/Tech Used
