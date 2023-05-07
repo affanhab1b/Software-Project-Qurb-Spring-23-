@@ -4,8 +4,10 @@ A hyperlocal social media app built using Flutter and Firebase. Works only on An
 
 ## Features
 
-*EVERYTHING IN REALTIME
+*EVERYTHING IS IN REALTIME
 
+- Signup with your neighborhood, username and email and a display photo
+- Login with your credentials
 - Email & Password Authentication
 - Share and displaying posts with a caption
 - Liking & Commenting on posts
