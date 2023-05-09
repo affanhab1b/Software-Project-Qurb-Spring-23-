@@ -9,6 +9,7 @@ import 'package:testing/responsive/responsive_layout_screen.dart';
 import 'package:testing/responsive/mobile_screen_layout.dart';
 import 'package:testing/responsive/web_screen_layout.dart';
 
+// extending login screen
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -16,6 +17,7 @@ class LoginScreen extends StatefulWidget {
   State<LoginScreen> createState() => _LoginScreenState();
 }
 
+// extending
 class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
@@ -28,6 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
     _passwordController.dispose();
   }
 
+  // user's login
   void loginUser() async {
     setState(() {
       _isLoading = true;
@@ -37,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
       password: _passwordController.text,
     );
 
-    if (res == "Success") {
+   // if (res == "Success") {
       Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (context) => const ResponsiveLayout(
@@ -82,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 64,
               ),
               const SizedBox(height: 64),
-              // text field email
+              // text field for the email
               TextFieldInput(
                 textEditingController: _emailController,
                 hintText: 'Enter your email',

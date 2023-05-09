@@ -12,6 +12,7 @@ import 'package:testing/utils/colors.dart';
 import 'package:testing/utils/utils.dart';
 import 'package:testing/widgets/text_field_input.dart';
 
+// Applying inheritance
 class SignupScreen extends StatefulWidget {
   const SignupScreen({Key? key}) : super(key: key);
 
@@ -19,6 +20,7 @@ class SignupScreen extends StatefulWidget {
   _SignupScreenState createState() => _SignupScreenState();
 }
 
+// extending signup
 class _SignupScreenState extends State<SignupScreen> {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
@@ -34,7 +36,8 @@ class _SignupScreenState extends State<SignupScreen> {
     _passwordController.dispose();
     _usernameController.dispose();
   }
-
+  
+  // signing up user
   void signUpUser() async {
     // set loading to true
     setState(() {
@@ -79,6 +82,7 @@ class _SignupScreenState extends State<SignupScreen> {
     });
   }
 
+  // navigating to login
   void navigatetoLogin() {
     Navigator.of(context).push(
       MaterialPageRoute(
@@ -105,7 +109,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 height: 64,
               ),
               const SizedBox(height: 64),
-              // circular widget for image insertion
+              // circular widget for the image insertion
               Stack(
                 children: [
                   _image != null
@@ -148,6 +152,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 hintText: 'Enter your email',
                 textInputType: TextInputType.emailAddress,
               ),
+              // size box
               const SizedBox(
                 height: 24,
               ),
